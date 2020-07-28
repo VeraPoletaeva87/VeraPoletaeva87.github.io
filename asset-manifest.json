@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/VeraPoletaeva87/Vera.Poletaeva87.github.io/static/css/main.5f361e03.chunk.css",
-    "main.js": "/VeraPoletaeva87/Vera.Poletaeva87.github.io/static/js/main.62ad1aff.chunk.js",
-    "main.js.map": "/VeraPoletaeva87/Vera.Poletaeva87.github.io/static/js/main.62ad1aff.chunk.js.map",
-    "runtime-main.js": "/VeraPoletaeva87/Vera.Poletaeva87.github.io/static/js/runtime-main.0d8f97f2.js",
-    "runtime-main.js.map": "/VeraPoletaeva87/Vera.Poletaeva87.github.io/static/js/runtime-main.0d8f97f2.js.map",
-    "static/js/2.a9922afc.chunk.js": "/VeraPoletaeva87/Vera.Poletaeva87.github.io/static/js/2.a9922afc.chunk.js",
-    "static/js/2.a9922afc.chunk.js.map": "/VeraPoletaeva87/Vera.Poletaeva87.github.io/static/js/2.a9922afc.chunk.js.map",
-    "index.html": "/VeraPoletaeva87/Vera.Poletaeva87.github.io/index.html",
-    "precache-manifest.3d80c972e02b463674d655291b1db9d9.js": "/VeraPoletaeva87/Vera.Poletaeva87.github.io/precache-manifest.3d80c972e02b463674d655291b1db9d9.js",
-    "service-worker.js": "/VeraPoletaeva87/Vera.Poletaeva87.github.io/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/VeraPoletaeva87/Vera.Poletaeva87.github.io/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.a9922afc.chunk.js.LICENSE.txt": "/VeraPoletaeva87/Vera.Poletaeva87.github.io/static/js/2.a9922afc.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/VeraPoletaeva87/Vera.Poletaeva87.github.io/static/media/logo.5d5d9eef.svg"
+    "main.css": "/static/css/main.5f361e03.chunk.css",
+    "main.js": "/static/js/main.502b80fe.chunk.js",
+    "main.js.map": "/static/js/main.502b80fe.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2f1c828c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2f1c828c.js.map",
+    "static/js/2.a9922afc.chunk.js": "/static/js/2.a9922afc.chunk.js",
+    "static/js/2.a9922afc.chunk.js.map": "/static/js/2.a9922afc.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.b8525e69c637cd0cfea77e740d2eab12.js": "/precache-manifest.b8525e69c637cd0cfea77e740d2eab12.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.a9922afc.chunk.js.LICENSE.txt": "/static/js/2.a9922afc.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.0d8f97f2.js",
+    "static/js/runtime-main.2f1c828c.js",
     "static/js/2.a9922afc.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.62ad1aff.chunk.js"
+    "static/js/main.502b80fe.chunk.js"
   ]
 }
