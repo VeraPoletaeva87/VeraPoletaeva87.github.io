@@ -1,10 +1,66 @@
 .App {
-  text-align: center;
+  background-color: #2e2c2b;
+}
+.logoPosition {
+  margin-left: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.scoreTextColor {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 90px;
+}
+
+.audio {
+  position: relative;
+  top: 20px;
+}
+
+.flex {
+  display: flex;
+}
+
+.currentBirdBlock {
+  width: calc(100% - 400px);
+}
+
+.header {
+  height: 40px;
+}
+
+.headerActiveColor {
+  background-color: #6bb18e;
+}
+
+.headerNotActiveColor {
+  background-color: #3d8661;
+}
+
+.currentBird {
+  padding: 15px;
+  height: 300px;
+  width: 300px;
+  border-radius: 30px;
+}
+
+.currentBirdName {
+  font-size: 30px;
+  border-bottom: #8d8c8c 1px solid;
+  color: white;
+}
+
+.currentQuestion {
+  background-color: #4c4c4c;
+}
+
+.questionListItem {
+  align-items: center;
+  height: 30px;
+  color: white;
+  display: inline-flex;
+  width: 305px;
+  justify-content: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
