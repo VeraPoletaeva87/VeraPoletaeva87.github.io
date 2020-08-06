@@ -29,8 +29,50 @@
   height: 40px;
 }
 
+.answerItemCircle {
+  width: 10px;
+  height: 10px;
+  background-color: #8d8c8c;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.rightAnswerItem {
+  background-color: #6bb18e;
+}
+
+.wrongAnswerItem {
+  background-color: darkred;
+}
+
+.answerItem {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  height: 50px;
+  width: 600px;
+  color: white;
+  background-color: #4c4c4c;
+  border: #8d8c8c 1px solid;
+}
+
 .headerActiveColor {
   background-color: #6bb18e;
+}
+
+.nextLevelBtn {
+  color: white;
+  width: 100%;
+  height: 50px;
+}
+
+.nextLevelBtnDefault {
+  background-color: #4c4c4c;
+}
+
+.marginTop {
+  margin-top: 40px;
 }
 
 .headerNotActiveColor {
