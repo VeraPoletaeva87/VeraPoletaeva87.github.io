@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './title.png';
 import unknownBird from './unknownBird.png';
+import congrats from './congrats.png';
 import rightMP3 from './win31.mp3';
 import wrongMP3 from './wrong_answer.mp3';
 import './App.css';
@@ -13,6 +14,8 @@ const steps = [
   { id: 4, title: 'Хищные птицы' },
   { id: 5, title: 'Морские птицы' }
 ];
+
+const maxScore = 30;
 
 const birds = {
   yastreb: {
@@ -89,10 +92,12 @@ class App extends React.Component {
       currentStep: 0,
       clickedBirds: [],
       guessed: false,
-      score: 0
+      score: 0,
+      finished: false
     };
     this.rightAudio = React.createRef();
     this.wrongAudio = React.createRef();
+    this.questionAudio = React.createRef();
   }
   
   onClick = () => {
@@ -105,17 +110,33 @@ class App extends React.Component {
         clickedBirds: [],
         guessed: false
       });
+    } else {
+      this.setState({
+        finished: true
+      });
     }
   };
   
+  repeatClick = () => {
+    this.setState({
+      currentBird: getRandomBirdByStep(0),
+      currentStep: 0,
+      clickedBirds: [],
+      guessed: false,
+      score: 0,
+      finished: false
+    });
+  };
+  
   onAnswerItemClick = (name) => {
-    const { clickedBirds } = this.state;
-    const { score } = this.state;
-    if (this.state.currentBird.name === name) {
+    const { clickedBirds, currentBird, score } = this.state;
+    
+    if (currentBird.name === name) {
       this.setState({
         guessed: true,
         score: score + (steps.length - clickedBirds.length - 1)
       });
+      this.questionAudio.current.pause();
       this.rightAudio.current.play();
     } else {
       this.setState({
@@ -126,7 +147,7 @@ class App extends React.Component {
   };
   
   render() {
-    const { clickedBirds, currentBird, currentStep, guessed, score } = this.state;
+    const { clickedBirds, currentBird, currentStep, guessed, score, finished } = this.state;
     const { img, name: currentName, voice } = currentBird;
     const lastClicked = clickedBirds[clickedBirds.length-1];
     const lastClickedInfo = guessed ? currentBird : Object.values(birds).filter(({ name }) => name === lastClicked)[0];
@@ -145,12 +166,14 @@ class App extends React.Component {
             })}
           </div>
         </header>
+        { !finished ?
+          <div>
         <div className='currentQuestion flex'>
           <img className='flex padding15 currentBird' src={guessed ? img : unknownBird}/>
           <div className='currentBirdBlock'>
             <div className='currentBirdName whiteText'>{guessed ? currentName : '******'}</div>
             <div>
-              <audio className='audio' controls>
+              <audio className='audio' controls ref={this.questionAudio}>
                 <source src={voice} type="audio/mp3" preload="metadata"/>
               </audio>
             </div>
@@ -193,7 +216,7 @@ class App extends React.Component {
                   </div>
                 </div>
                 <div className='padding15'>{currentBird.description}</div>
-              </div> : <div className='whiteText'> Послушайте плеер. Выберите птицу из списка </div>
+              </div> : <div className='whiteText width600'> Послушайте плеер. Выберите птицу из списка </div>
             }
           </div>
           <div>
@@ -209,6 +232,18 @@ class App extends React.Component {
         <button className={`nextLevelBtn marginTop whiteText ${guessed ? 'rightAnswerItem' : 'nextLevelBtnDefault'}`}
                 onClick={this.onClick} disabled={!guessed}>Next level
         </button>
+          </div>
+          :
+          <div className='flex finishBlock'>
+            <div className='whiteText'>
+              Вы набрали {score} баллов из {maxScore} возможных.
+            </div>
+            {score === maxScore ? <div><img className='padding15 congratsImg' src={congrats}/></div> :
+              <button className='repeatBtn headerActiveColor marginTop whiteText' onClick={this.repeatClick}>
+                Начать игру заново
+              </button>}
+          </div>
+        }
       </div>
     );
   }
