@@ -122,6 +122,16 @@
   border-bottom: #8d8c8c 1px solid;
 }
 
+.lastClikedName {
+  font-size: 25px;
+  border-bottom: #8d8c8c 1px solid;
+}
+
+.currentBirdLatName {
+  font-size: 15px;
+  border-bottom: #8d8c8c 1px solid;
+}
+
 .currentQuestion {
   background-color: #4c4c4c;
 }
