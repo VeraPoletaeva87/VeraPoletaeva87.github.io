@@ -2,7 +2,8 @@
   "name": "vera.poletaeva87.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/VeraPoletaeva87/Vera.Poletaeva87.github.io",
+  "homepage": "https://verapoletaeva87.github.io",
+  "repository": "git@github.com:VeraPoletaeva87/songbird.git",
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
